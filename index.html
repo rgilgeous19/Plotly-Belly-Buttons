@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Bellybutton Biodiversity</title>
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+
+    <!-- custom CSS-->
+    <link href="static/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12 jumbotron text-center">
+            <h1>Belly Button Biodiversity Dashboard</h1>
+            <p>Use the interactive charts below to explore the dataset</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12" id="outline">
+            <p>Bacterial species found in a human bellybutton. We will then select which speciies can be tested to synthesize proteins that taste like beef. </p>
+          </div>
+        </div>
+        <div class="row" id="filler">
+          <div class="col-sm-12"></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-2">
+            <div class="well">
+              <h5>Test Subject ID No.:</h5>
+              <!-- <select id="selDataset"></select> -->
+              <select id="selDataset" onchange="optionChanged(this.value)"></select>
+            </div>
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Demographic Info</h3>
+              </div>
+              <div id="sample-metadata" class="panel-body"></div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-5">
+            <div id="bar"></div>
+            <p style="margin-top: 50px;">Depicts the top 10 bacterial cultures found in a test subject's bellybutton</p>
+          </div>
+          <div class="col-sm-12 col-md-5">
+            <div id="gauge" class="mw-100"></div>
+            <p>Depicts the wash frequency of the subject's bellybutton per week</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div id="bubble"></div>
+            <p> Shows bacterial cultures & quantity of bacteria species.</p>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="static/js/charts.js"></script>
+</body>
+
+</html>
